@@ -15,16 +15,24 @@ accordionBtns.forEach((accordion) => {
   accordion.onclick = function () {
     this.classList.toggle("is-open");
 
+    // Toggle aria-expanded
+    const isOpen = this.classList.contains("is-open");
+    this.setAttribute("aria-expanded", isOpen);
+
     let content = this.nextElementSibling;
-    console.log(content);
 
     if (content.style.maxHeight) {
-      //this is if the accordion is open
       content.style.maxHeight = null;
     } else {
-      //if the accordion is currently closed
       content.style.maxHeight = content.scrollHeight + "px";
-      console.log(content.style.maxHeight);
+    }
+  };
+
+  // Add keyboard support
+  accordion.onkeydown = function (event) {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault(); // Prevent scrolling when space is pressed
+      this.click(); // Trigger the click event
     }
   };
 });
