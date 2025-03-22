@@ -18,54 +18,22 @@
 
 'use strict';
 
-class Accordion {
-  constructor(domNode) {
-    this.rootEl = domNode;
-    this.buttonEl = this.rootEl.querySelector('button[aria-expanded]');
+const accordionBtns = document.querySelectorAll(".accordion");
 
-    const controlsId = this.buttonEl.getAttribute('aria-controls');
-    this.contentEl = document.getElementById(controlsId);
+accordionBtns.forEach((accordion) => {
+  accordion.onclick = function () {
+    this.classList.toggle("is-open");
 
-    this.open = this.buttonEl.getAttribute('aria-expanded') === 'true';
+    let content = this.nextElementSibling;
+    console.log(content);
 
-    // add event listeners
-    this.buttonEl.addEventListener('click', this.onButtonClick.bind(this));
-  }
-
-  onButtonClick() {
-    this.toggle(!this.open);
-  }
-
-  toggle(open) {
-    // don't do anything if the open state doesn't change
-    if (open === this.open) {
-      return;
-    }
-
-    // update the internal state
-    this.open = open;
-
-    // handle DOM updates
-    this.buttonEl.setAttribute('aria-expanded', `${open}`);
-    if (open) {
-      this.contentEl.removeAttribute('hidden');
+    if (content.style.maxHeight) {
+      //this is if the accordion is open
+      content.style.maxHeight = null;
     } else {
-      this.contentEl.setAttribute('hidden', '');
+      //if the accordion is currently closed
+      content.style.maxHeight = content.scrollHeight + "px";
+      console.log(content.style.maxHeight);
     }
-  }
-
-  // Add public open and close methods for convenience
-  open() {
-    this.toggle(true);
-  }
-
-  close() {
-    this.toggle(false);
-  }
-}
-
-// init accordions
-const accordions = document.querySelectorAll('.accordion h3');
-accordions.forEach((accordionEl) => {
-  new Accordion(accordionEl);
+  };
 });
