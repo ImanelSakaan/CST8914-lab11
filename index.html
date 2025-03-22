@@ -9,30 +9,100 @@
 </head>
 <body>
     <main>
-        <div class="container">
+        <div id="accordionGroup" class="accordion">
             <h1>Simple Accordions</h1>
 
-            <button class="accordion" aria-expanded="false" aria-controls="panel1" id="button1">Website Design and Development</button>
-            <div class="accordion-content" id="panel1" role="region" aria-labelledby="button1">
-                <p>
+           <!--  <button class="accordion" aria-expanded="false" aria-controls="panel1" id="button1">Website Design and Development</button> -->
+            <h3>
+                <button type="button"
+                        aria-expanded="true"
+                        class="accordion-trigger"
+                        aria-controls="sect1"
+                        id="accordion1id">
+                  <span class="accordion-title">
+                    Website Design and Development
+                    <span class="accordion-icon"></span>
+                  </span>
+                </button>
+              </h3>
+           <!--   <div class="accordion-content" id="panel1" role="region" aria-labelledby="button1"> -->
+                <div id="sect1"
+                   role="region"
+                   aria-labelledby="accordion1id"
+                   class="accordion-panel">
+                <div>
+                  <fieldset>
+                    <p>
                     Whether you need a WordPress website, a Shopify site, or a custom full-stack application, we got you! No matter what kind of website or application you need, it will be made with clean and maintainable code that follows modern development standards. We also have top-notch designers that can make unique designs that will make your website look different and unique. Not to mention that we also provide 24/7 website maintenance so that you get all the support you need.
-                </p>
-            </div>
-
-            <button class="accordion" aria-expanded="false" aria-controls="panel2" id="button2">Website Analytics and Performance</button>
-            <div class="accordion-content" id="panel2" role="region" aria-labelledby="button2">
+                    </p>
+                  </fieldset>
+                </div>
+              </div>
+            
+        
+            <!--<button class="accordion" aria-expanded="false" aria-controls="panel2" id="button2">Website Analytics and Performance</button> -->
+           <h3>
+                <button type="button"
+                        aria-expanded="false"
+                        class="accordion-trigger"
+                        aria-controls="sect2"
+                        id="accordion2id">
+                  <span class="accordion-title">
+                    Website Analytics and Performance</button
+                    <span class="accordion-icon"></span>
+                  </span>
+                </button>
+          </h3>
+        
+        
+        <!-- <div class="accordion-content" id="panel2" role="region" aria-labelledby="button2"> -->
+            
+        <div id="sect2"
+               role="region"
+               aria-labelledby="accordion2id"
+               class="accordion-panel"
+               hidden="">
+            <div>
+              <fieldset>
                 <p>
                     We believe that in order to have a successful website, you need to constantly adjust and adapt to the data provided by your website visitors. Here at Pierre Web Development, we have narrowed down the specific key performance indicators that will dramatically boost your success with connecting to target markets. We will provide a basic metric dashboard based on how much traffic your site gets, detailed analytical reports that show which parts of your website are the most popular among visitors, as well as access to tools you can use to make meaningful decisions based on this data.
                 </p>
+              </fieldset>
             </div>
+          </div>
+            
 
-            <button class="accordion" aria-expanded="false" aria-controls="panel3" id="button3">Digital Marketing</button>
-            <div class="accordion-content" id="panel3" role="region" aria-labelledby="button3">
-                <p>
+            <!-- <button class="accordion" aria-expanded="false" aria-controls="panel3" id="button3">Digital Marketing</button>  -->
+                <h3>
+                    <button type="button"
+                            aria-expanded="false"
+                            class="accordion-trigger"
+                            aria-controls="sect3"
+                            id="accordion3id">
+                      <span class="accordion-title">
+                        Digital Marketing
+                        <span class="accordion-icon"></span>
+                      </span>
+                    </button>
+                  </h3>
+          
+            <!-- <div class="accordion-content" id="panel3" role="region" aria-labelledby="button3"> -->
+            <div id="sect3"
+                   role="region"
+                   aria-labelledby="accordion3id"
+                   class="accordion-panel"
+                   hidden="">
+                <div>
+                  <fieldset>
+                    <p>
                     We know that every great website focuses on helping you get more business and building a brand that your ideal customers will love and support. We can help you set up a great, SEO-focused content strategy, a paid ads campaign, email marketing integration with Mailchimp, as well as a social media marketing campaign. We also use popular website analytic tools to track your site's performance and provide you with weekly analytic reports to help bolster your growth.
                 </p>
+                    
+                  </fieldset>
+                </div>
+              </div>
             </div>
-        </div>
+          
         <script src="accordion.js"></script>
     </main>
 </body>
