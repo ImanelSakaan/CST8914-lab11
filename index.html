@@ -37,8 +37,24 @@
 				</p>
 			  </div>
 			
-			  <button class="accordion">Website Analytics and Performance</button>
-			  <div class="accordion-content">
+			  <!--<button class="accordion">Website Analytics and Performance</button> -->
+			  <button type="button"
+			            aria-expanded="false"
+			            class="accordion-trigger"
+			            aria-controls="sect2"
+			            id="accordion2id">
+			      <span class="accordion-title">
+			        Website Analytics and Performance
+			        <span class="accordion-icon"></span>
+			      </span>
+			    </button>
+				
+			<!-- <div class="accordion-content"> -->
+				<div id="sect2"
+				       role="region"
+				       aria-labelledby="accordion2id"
+				       class="accordion-panel"
+				       hidden="">
 				<p>
 				  We believe that in order to have a successful website, you need to constantly adjust and adapt to the data provided by your website visitors. Here at Pierre Web Development, we have narrowed down the specific key performance indicators that will dramatically boost your success with connecting to target markets. We will provide a basic metric dashboard based on how much traffic your site gets, detailed analytical reports that show which parts of your website is the most popular among visitors as well as access to tools you can use to make meaningful decisions based on this data.
 				</p>
