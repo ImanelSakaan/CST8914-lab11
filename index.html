@@ -10,11 +10,24 @@
 	<body>
 		<main>
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-			<div class="container">
+			<div id="accordionGroup" class="accordion">
 			  <h1>Simple Accordions</h1>
 			
-			  <button class="accordion">Website Design and Development</button>
-			  <div class="accordion-content">
+			  <!-- <button class="accordion">Website Design and Development</button> -->
+			  
+			<button type="button"
+		            aria-expanded="true"
+		            class="accordion-trigger"
+		            aria-controls="sect1"
+		            id="accordion1id">
+		      <span class="accordion-title">
+		        Website Design and Development
+		        <span class="accordion-icon"></span>
+		      </span>
+		    </button>
+				
+				
+			<div class="accordion-content">
 				<p>
 				  Whether you need a wordpress website, a shopify site, or a custom fullstack application, we got you! No matter what kind of website or application you need, it will be made with clean and maintable code that follows modern development standards. We also have top notch designers that can make unique designs that will make your website look different and unique. Not to mention that we also provide 24/7 website maintenance so that you get all the support you need.
 				</p>
